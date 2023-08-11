@@ -21,7 +21,6 @@ export default async function Page({ params }: { params: any }) {
     ? { token: process.env.SANITY_API_READ_TOKEN }
     : undefined;
   const post = await getCachedClient(preview)<SanityDocument>(postQuery, params);
-
   if (preview?.token) {
     return (
       <PreviewProvider token={preview.token}>
