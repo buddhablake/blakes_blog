@@ -13,9 +13,9 @@ export default function Posts({ posts = [] }: { posts: SanityDocument[] }) {
     return (
         <main className="container mx-auto p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center justify-items-center">
             {posts.map((post) => (
-                <div className="w-[300px] shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <div className="w-[300px] shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out"
+                key={post._id}>
                     <Link
-                        key={post._id}
                         href={post.slug.current}
                         className=""
                     >
