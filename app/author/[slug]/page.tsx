@@ -1,7 +1,7 @@
 // ./nextjs-app/app/[slug]/page.tsx
 
 
-// import { cachedClient } from "@/sanity/lib/client";
+import { cachedClient } from "@/sanity/lib/client";
 import { authorPostsQuery } from "@/sanity/lib/queries";
 import { getCachedClient } from "@/sanity/lib/getClient";
 import Posts from "@/app/_components/Posts";
@@ -15,13 +15,11 @@ import Posts from "@/app/_components/Posts";
 export default async function Page({ params }: { params: any }) {
   console.log(params)
   const authorArchive = await getCachedClient()(authorPostsQuery, params);
-console.log(authorArchive.posts[0].title)
-  // const postTitleOne = authorArchive[0].title;
-
+console.log(authorArchive)
   return (
   <>
-  <h2>Author: {authorArchive.name}</h2>
-  <Posts posts={authorArchive.posts} />
+  <h2>Author: {authorArchive?.name}</h2>
+  <Posts posts={authorArchive?.posts} />
   </>
   );
 }
