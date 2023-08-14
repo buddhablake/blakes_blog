@@ -1,7 +1,7 @@
 const goFuckYourself = () => {
 return (
-    <div>
-        GO FUCK YOURSELF
+    <div className="h-[calc(100vh-6rem)] flex justify-center items-center">
+        <h1 className="text-4xl">GO FUCK YOURSELF 🙃</h1>
     </div>
 )
 }
