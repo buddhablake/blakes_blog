@@ -10,7 +10,7 @@ const Nav = () => {
                     </Link>
                     </li>
                     <li>
-                    <Link href="/blog" className='hover:underline'>
+                    <Link href="/work" className='hover:underline'>
                         Work
                     </Link>
                     </li>

@@ -27,6 +27,7 @@
     "sanity-plugin-asset-source-unsplash": "^1.1.0",
     "sanity-plugin-iframe-pane": "^2.5.4",
     "styled-components": "5.2",
+    "swiper": "^10.1.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },

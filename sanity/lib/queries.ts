@@ -39,3 +39,9 @@ export const categoriesQuery = groq`*[_type == "category"]{
   //Get all post from a single category via its slug and get the category title
 
 export const categoryPostsQuery = groq`*[_type == "post" && $slug in categories[]->slug.current]${ basePostQuery }`;
+
+
+// get all portfolio items
+export const portfolioQuery = groq`*[_type == "portfolioItem" && defined(slug.current)][]{
+  _id, title, body, slug, author->{name, image, slug, bio}, mainImage, publishedAt, gallery
+}`;
