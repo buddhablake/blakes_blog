@@ -7,7 +7,7 @@ import SwiperSlider from "@/app/_components/SwiperSlider";
 const Works = ({works}: {works:any}) => (
     <div>
     <div className="h-8"></div>
-            <h2 className="text-2xl text-black">Shit I've Built</h2>
+            <h2 className="text-2xl text-black">Shit I&apos;ve Built</h2>
     {works.map((work:any) => (
         <div key={work?._id}>
             <h1>{work?.title}</h1>
