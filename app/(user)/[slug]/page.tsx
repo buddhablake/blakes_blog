@@ -23,11 +23,17 @@ export default async function Page({ params }: { params: any }) {
   const post = await getCachedClient(preview)<SanityDocument>(postQuery, params);
   if (preview?.token) {
     return (
-      <PreviewProvider token={preview.token}>
-        <PreviewPost post={post} />
-      </PreviewProvider>
+      <>
+        <PreviewProvider token={preview.token}>
+          <PreviewPost post={post} />
+        </PreviewProvider>
+      </>
     );
   }
 
-  return <Post post={post} />;
+  return (
+    <>
+      <Post post={post} />
+    </>
+  );
 }

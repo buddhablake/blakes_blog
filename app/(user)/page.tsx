@@ -21,11 +21,13 @@ export default async function Home() {
 
   if (preview && preview.token) {
     return (
+      <>
       <PreviewProvider token={preview.token}>
         <PreviewFeaturedPosts posts={featuredPosts} />
         <PreviewCategories categories={categories} />
         <PreviewPosts posts={posts} />
       </PreviewProvider>
+      </>
     );
   }
 

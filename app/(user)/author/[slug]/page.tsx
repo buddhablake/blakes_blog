@@ -5,6 +5,7 @@ import { cachedClient } from "@/sanity/lib/client";
 import { authorPostsQuery } from "@/sanity/lib/queries";
 import { getCachedClient } from "@/sanity/lib/getClient";
 import Posts from "@/app/_components/Posts";
+import AuthorCard from "@/app/_components/AuthorCard";
 // Prepare Next.js to know which routes already exist
 // export async function generateStaticParams() {
 //   const authorData = await cachedClient(authorPostsQuery);
@@ -15,10 +16,10 @@ import Posts from "@/app/_components/Posts";
 export default async function Page({ params }: { params: any }) {
   console.log(params)
   const authorArchive = await getCachedClient()(authorPostsQuery, params);
-console.log(authorArchive)
+  console.log(authorArchive)
   return (
   <>
-  <h2>Author: {authorArchive?.name}</h2>
+  <AuthorCard author={authorArchive} />
   <Posts posts={authorArchive?.posts} />
   </>
   );

@@ -3,8 +3,8 @@
 import { groq } from "next-sanity";
 
 const basePostQuery = `{
-  _id, title, body, slug, author->{name, image, slug}, mainImage, publishedAt, categories[]->{
-    title, slug
+  _id, title, body, slug, author->{name, image, slug, bio}, mainImage, publishedAt, categories[]->{
+    title, slug, description, image
   }
 }`
 
