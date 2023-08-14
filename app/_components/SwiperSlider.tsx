@@ -1,11 +1,9 @@
 'use client'
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard } from 'swiper/modules'
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
-// import { SanityDocument } from "@sanity/client";
 import { client } from "@/sanity/lib/client";
 
 const builder = imageUrlBuilder(client);
@@ -13,10 +11,10 @@ const builder = imageUrlBuilder(client);
 // Import Swiper styles
 import 'swiper/css';
 
-export default ({ slides }: { slides: any }) => {
+const SwiperSlider = ({ slides }: { slides: any }) => {
     return (
         <Swiper
-        loop
+            loop
             spaceBetween={50}
             slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
@@ -44,3 +42,5 @@ export default ({ slides }: { slides: any }) => {
         </Swiper>
     );
 };
+
+export default SwiperSlider
