@@ -16,10 +16,10 @@ const PostCard = ({ post, index }: { post: SanityDocument, index: any }) => {
                 backgroundRepeat: 'no-repeat',
             }}>
             <div className="p-4 flex flex-col gap-3">
-                <Link href={`/${post.slug.current}`}>
+                <Link href={`/blog/${post.slug.current}`}>
                     <h2 className="text-xl hover:underline">{post.title}</h2>
                 </Link>
-                <Link href={`/author/${post?.author?.slug?.current}`}>
+                <Link href={`/blog/author/${post?.author?.slug?.current}`}>
                     <div className="flex items-center gap-3">
                         {post?.author?.image ? (
                             <Image

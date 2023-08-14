@@ -18,7 +18,7 @@ const Categories = ({ categories = [] }: { categories: SanityDocument [] }) => {
             <div className="h-8"></div>
         <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-12">
         {categories.map((category) => (
-            <Link href={`/category/${category.slug.current}`} key={category._id}
+            <Link href={`/blog/category/${category.slug.current}`} key={category._id}
             >
             <div className="flex flex-col gap-3" key={category._id}>
                 {category?.image ? (
