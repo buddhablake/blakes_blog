@@ -12,7 +12,7 @@ const AuthorCard = ({ author }: { author: SanityDocument }) => {
     return (
         <div>
             <div className="w-full">
-                <div className="flex gap-4 items-center">
+                <div className="grid grid-cols-2 gap-4 items-center w-[fit-content]">
                     <div className="w-[100px] h-[100px] relative">
                     {author?.image ? (
                             <Image
@@ -27,9 +27,9 @@ const AuthorCard = ({ author }: { author: SanityDocument }) => {
                         <p className="text-2xl font-bolder">
                             {author?.name}
                         </p>
-                        <p className="text-base">
+                        {/* <p className="text-base">
                             {author?.bio ? <PortableText value={author.bio} /> : null}
-                        </p>
+                        </p> */}
                     </div>
                 </div>
 
