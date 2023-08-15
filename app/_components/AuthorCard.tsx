@@ -12,7 +12,7 @@ const AuthorCard = ({ author }: { author: SanityDocument }) => {
     return (
         <div>
             <div className="w-full">
-                <div className="grid grid-cols-2 gap-4 items-center w-[fit-content]">
+                <div className="grid grid-cols-2 gap-3 items-center w-[fit-content]">
                     <div className="w-[100px] h-[100px] relative">
                     {author?.image ? (
                             <Image
