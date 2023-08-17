@@ -25,7 +25,7 @@ const Hero = () => {
         <section className="flex justify-start items-center p-12 h-[500px] w-full bg-slate-400 text-white text-5xl relative overflow-hidden">
             <motion.div className='flex flex-col gap-5 w-1/2'  initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}>
-                <span>Let's get started!</span>
+                <span>Let&apos;s get started!</span>
                 <form className="flex" onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="name">What is your first name?</label>
