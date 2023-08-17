@@ -14,8 +14,8 @@ import 'swiper/css';
 const SwiperSlider = ({ slides }: { slides: any }) => {
     return (
         <Swiper
+        className="rounded-lg"
             loop
-            spaceBetween={50}
             slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}

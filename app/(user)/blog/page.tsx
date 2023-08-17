@@ -8,7 +8,7 @@ import PreviewFeaturedPosts from "@/app/_components/PreviewFeaturedPosts";
 import Categories from "@/app/_components/Categories";
 import PreviewCategories from "@/app/_components/PreviewCategories";
 import Posts from "@/app/_components/Posts";
-import PreviewPosts from "@/app/_components/PreviewPosts";
+import PreviewPosts from "@/app/_components/Posts/PreviewPosts";
 import PreviewProvider from "@/app/_components/PreviewProvider";
 
 export default async function Home() {
@@ -33,9 +33,11 @@ export default async function Home() {
 
   return (
   <>
+  <main className="container mx-auto p-12">
   <FeaturedPosts posts={featuredPosts} />
   <Categories categories={categories} />
   <Posts posts={posts} />
+  </main>
   </>
   );
 }

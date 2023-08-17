@@ -1,7 +1,7 @@
 import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import StudioHeader from '@/app/_components/StudioHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html>
       <body className={inter.className}>
+        <StudioHeader />
       {children}
       </body>
     </html>

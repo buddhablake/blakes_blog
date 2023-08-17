@@ -33,7 +33,9 @@ export default async function Page({ params }: { params: any }) {
 
   return (
     <>
+    <main className="container mx-auto p-12">
       <Post post={post} />
+    </main>
     </>
   );
 }
