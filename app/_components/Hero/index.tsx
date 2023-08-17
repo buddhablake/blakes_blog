@@ -15,7 +15,7 @@ const Hero = () => {
         setName({ name: value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault()
         console.log(name.name)
         setName({ name: '' })
