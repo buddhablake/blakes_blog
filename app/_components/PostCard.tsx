@@ -12,13 +12,13 @@ const PostCard = ({ post, index }: { post: SanityDocument, index: any }) => {
     return (
         <motion.div key={post._id}
             initial={{
-                opacity: 0,
-                y: 100
+                opacity: 0
             }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1}}
             transition={{
                 duration: 1
-            }} className={`h-[400px] shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col justify-end text-white relative ${index % 5 === 0 ? 'col-span-1 md:col-span-2' : ''} ${(index === 1 || index === 2) ? 'row-span-1' : ''} ${index % 5 === 3 || index % 5 === 4 ? 'row-span-1' : ''}`}
+            }}
+            viewport={{ once: true }} className={`h-[400px] shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col justify-end text-white relative ${index % 5 === 0 ? 'col-span-1 md:col-span-2' : ''} ${(index === 1 || index === 2) ? 'row-span-1' : ''} ${index % 5 === 3 || index % 5 === 4 ? 'row-span-1' : ''}`}
             style={{
                 background: `url(${builder.image(post.mainImage).width(800).height(800).url()})`,
                 backgroundSize: 'cover',
