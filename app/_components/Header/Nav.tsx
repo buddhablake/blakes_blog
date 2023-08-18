@@ -14,11 +14,6 @@ const Nav = () => {
                         Work
                     </Link>
                     </li>
-                    <li>
-                    <Link href="/fuck-you" className='hover:underline'>
-                        Fuck you
-                    </Link>
-                    </li>
             </ul>
         </nav>
     )

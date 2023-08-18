@@ -18,9 +18,9 @@ export default async function Page({ params }: { params: any }) {
   const authorArchive = await getCachedClient()(authorPostsQuery, params);
   console.log(authorArchive)
   return (
-  <>
+  <main className="container mx-auto p-12">
   <AuthorCard author={authorArchive} />
   <Posts posts={authorArchive?.posts} />
-  </>
+  </main>
   );
 }

@@ -6,7 +6,7 @@ const Header = () => {
             <div className="container mx-auto flex justify-between items-center h-full">
                 <Link href="/">
                     <h1 className="text-3xl font-bold text-gray-800">Halsey Street Collective</h1>
-                    <p>Creators of Cool Shit</p>
+                    <p>A creative collective with a love for local</p>
                 </Link>
                <Nav />
             </div>

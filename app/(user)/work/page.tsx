@@ -18,7 +18,9 @@ const Page =  async() => {
 
   return (
   <>
+  <main className="container mx-auto p-12">
   <Works works={works} />
+  </main>
   </>
   );
 }

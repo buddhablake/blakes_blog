@@ -12,7 +12,7 @@ const PostCard = ({ post, index }: { post: SanityDocument, index: any }) => {
     return (
         <motion.div key={post._id}
             initial={{
-                opacity: 0
+                opacity: 0,
             }}
             whileInView={{ opacity: 1}}
             transition={{

@@ -1,7 +1,5 @@
 "use client";
 import Image from 'next/image';
-
-
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityDocument } from "@sanity/client";
 import { client } from "@/sanity/lib/client";
