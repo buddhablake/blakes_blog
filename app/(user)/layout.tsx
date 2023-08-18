@@ -4,6 +4,7 @@ import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/app/_components/Header'
+import Footer from '@/app/_components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +24,7 @@ export default function RootLayout({
         <Header />
      
             {children}
-            
+            <Footer />
       </body>
     </html>
   )

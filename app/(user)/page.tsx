@@ -24,9 +24,9 @@ const homePage = async () => {
     return (
         <>
         <Hero />
-        <main className="container mx-auto p-12">
-        <Works works={works} />
-        <FeaturedPosts posts={featuredPosts} />
+        <main className="container mx-auto px-12">
+        {/* <Works works={works} />
+        <FeaturedPosts posts={featuredPosts} /> */}
         </main>
         </>
     )
