@@ -6,6 +6,7 @@ import { getCachedClient } from "@/sanity/lib/getClient";
 import { featuredPostsQuery, portfolioQuery } from "@/sanity/lib/queries";
 import Works from "@/app/_components/Works";
 import Hero from "@/app/_components/Hero";
+import ComingSoon from "@/app/_components/ComingSoon";
 
 const homePage = async () => {
     const preview = draftMode().isEnabled ? {token: process.env.SANITY_API_READ_TOKEN} : undefined
@@ -22,13 +23,9 @@ const homePage = async () => {
 
 
     return (
-        <>
-        <Hero />
-        <main className="container mx-auto px-12">
-        {/* <Works works={works} />
-        <FeaturedPosts posts={featuredPosts} /> */}
+        <main>
+            <ComingSoon />
         </main>
-        </>
     )
 }
 

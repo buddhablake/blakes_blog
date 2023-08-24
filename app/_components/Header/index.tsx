@@ -6,7 +6,7 @@ import Nav from "./Nav"
 import { motion } from "framer-motion"
 const Header = () => {
     return (
-        <header className="w-full bg-slate-100">
+        <header className="w-full bg-slate-100 h-36">
             <motion.div 
             initial={
                 {opacity: 0, y: 100}
@@ -17,14 +17,15 @@ const Header = () => {
             viewport={
                 {once: true}
             } 
-            className="px-12 h-36 flex justify-between items-center w-screen">
-            <div className="container mx-auto flex justify-between items-center h-full">
-               
-                <Link href="/">
-                    <Image src="/Logo.png" alt="Halsey Street Collective" width={400} height={50} />
+            className="px-12 h-full flex justify-between items-center w-screen">
+                <Link href="/" className="w-full  relative h-full">
+                    
+                    <Image src="/Logo.png" alt="Halsey Street Collective" fill 
+                    className="object-contain"/>
+                
                 </Link>
-               <Nav />
-            </div>
+               {/* <Nav /> */}
+            
                 </motion.div>
         </header>
     )
